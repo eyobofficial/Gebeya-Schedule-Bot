@@ -1,0 +1,14 @@
+language: python
+
+python:
+    - "3.6"
+
+install:
+    - pip install pipenv
+    - pipenv install --dev
+
+services:
+    - sqlite3
+
+script:
+    - python manage.py test
