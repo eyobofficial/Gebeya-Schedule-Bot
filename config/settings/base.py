@@ -48,6 +48,7 @@ INSTALLED_APPS += [
 
 INSTALLED_APPS += [
     'accounts.apps.AccountsConfig',
+    'bot.apps.BotConfig',
 ]
 
 MIDDLEWARE = [
