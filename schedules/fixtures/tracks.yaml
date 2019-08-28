@@ -1,0 +1,21 @@
+- model: schedules.track
+  pk: 1
+  fields:
+    title: Business Analyst
+    code: BA
+- model: schedules.track
+  pk: 2
+  fields:
+    title: Front-end
+    code: FE
+- model: schedules.track
+  pk: 3
+  fields:
+    title: Back-end
+    code: BE
+- model: schedules.track
+  pk: 4
+  fields:
+    title: DevOps
+    code: DO
+
