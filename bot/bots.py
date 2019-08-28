@@ -21,7 +21,7 @@ class TelegramBot:
         self.commands = [
             'start', 'track', 'session',
             'today', 'tomorrow', 'week', 'month',
-            'about', 'help', 'credits', 'me'
+            'help', 'credits', 'me'
         ]
 
     @property
@@ -193,6 +193,12 @@ class TelegramBot:
         session = self.sessions.get(user.session) or "Unknown. Use /session to set it."
         message = messages.me.format(user.first_name, track, session)
         self.reply(text=message)
+
+    def credits(self, **kwargs):
+        """
+        Get the list of contributors.
+        """
+        self.reply(text=messages.credits_message)
 
     def response_handler(self, user):
         """

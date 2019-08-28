@@ -30,10 +30,10 @@ help_message = \
 *Account Settings*
 /track - set or change your track
 /session - set or change your class session
+/me - get your account details
 
 *Help*
 /help - get the list of all commands
-/about - get overview about the bot.
 /credits - get the list of contributors.
 """
 
@@ -57,4 +57,15 @@ me = \
 *Session: *{}
 
 You can update your track and session using the /track & /session commands.
+"""
+
+
+credits_message = \
+"""
+**DEVELOPERS**
+
+👤 Eyob Tariku
+✉️ eyobtariku@gmail.com
+📱 +251 911 42 78 05
+
 """
