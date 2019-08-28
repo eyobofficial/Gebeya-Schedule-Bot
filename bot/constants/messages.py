@@ -67,5 +67,13 @@ credits_message = \
 👤 Eyob Tariku
 ✉️ eyobtariku@gmail.com
 📱 +251 911 42 78 05
-
 """
+
+
+about = \
+"""
+👋🏼 Hi! My name is `Gebeya Class Bot`. I will help you to easily get your daily, \
+weekly and monthly Gebeya class schedules. Get started with me by firing the \
+/start command.
+"""
+
