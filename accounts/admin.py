@@ -9,10 +9,14 @@ class CustomUserAdmin(admin.ModelAdmin):
         'username',
         'first_name',
         'telegram_id',
+        'track',
+        'session',
         'is_active',
         'is_staff',
-        'is_superuser'
+        'is_superuser',
+        'access_count'
     )
     list_display_link = ('username', 'first_name')
     list_filter = ('is_active', 'is_staff', 'is_superuser', 'is_manually_added')
     search_fields = ('username', 'first_name', 'telegram_id')
+    readonly_fields = ('access_count', 'updated_at')
