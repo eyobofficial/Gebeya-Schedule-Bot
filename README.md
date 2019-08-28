@@ -6,17 +6,18 @@ A simple telegram bot that responds back the list of class schedules for [Gebeya
 ## Available Commands
 
 #### Class Schedules
-* `/today` - get today class schedules
-* `/tomorrow` - get tomorrow class schedules
+* `/today` - get class schedules for today
+* `/tomorrow` - get class schedules for tomorrow
 * `/week` - get class schedules for 1 week from today
 * `/month` - get class schedules for 1 week from today
 
 #### Account Settings
+* `/me` - get your account details
 * `/track` - set or change your track
 * `/session` - set or change your class session
-* `/me` - get your account details
 
 #### Help
+* `/start` - get started with me
 * `/about` - get brief description about the bot
 * `/help` - get the list of all commands
-* `/credits` - get the list of contributors.
+* `/credits` - get the list of contributors & developers
