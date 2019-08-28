@@ -1,2 +1,22 @@
 # Gebeya Schedule Bot
 A simple telegram bot that responds back the list of class schedules for [Gebeya Training Academy.](https://gebeya.training/)
+
+**Bot link:** [@gebeya_schedule_bot](http://t.me/gebeya_schedule_bot)
+
+## Available Commands
+
+#### Class Schedules
+* `/today` - get today class schedules
+* `/tomorrow` - get tomorrow class schedules
+* `/week` - get class schedules for 1 week from today
+* `/month` - get class schedules for 1 week from today
+
+#### Account Settings
+* `/track` - set or change your track
+* `/session` - set or change your class session
+* `/me` - get your account details
+
+#### Help
+* `/about` - get brief description about the bot
+* `/help` - get the list of all commands
+* `/credits` - get the list of contributors.

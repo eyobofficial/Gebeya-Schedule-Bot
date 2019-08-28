@@ -33,8 +33,9 @@ help_message = \
 /me - get your account details
 
 *Help*
+/about - get brief description about the bot
 /help - get the list of all commands
-/credits - get the list of contributors.
+/credits - get the list of contributors
 """
 
 session_missing = \
