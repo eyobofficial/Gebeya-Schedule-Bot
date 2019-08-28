@@ -14,10 +14,18 @@ class TelegramBot:
     """
 
     def __init__(self, **kwargs):
+        # Initialize telegram bot
         self.bot = telegram.Bot(settings.TELEGRAM_BOT_TOKEN)
+
+        # Handle edited messages
         self.context = kwargs.get('context')
+        self.data = self.context.get('message') or self.context.get('edited_message')
+
+        # Get tracks and sessions
         self.tracks = Track.objects.values_list('title', flat=True)
         self.sessions = {s[0]: s[1] for s in User.SESSION_CHOICES}
+
+        # Register commands
         self.commands = [
             'start', 'track', 'session',
             'today', 'tomorrow', 'week', 'month',
@@ -26,20 +34,20 @@ class TelegramBot:
 
     @property
     def message(self):
-        if self.context:
-            return self.context['message']['text'].strip()
+        if self.data:
+            return self.data['text'].strip()
         return
 
     @property
     def sender(self):
-        if self.context:
-            return self.context['message']['from']
+        if self.data:
+            return self.data['from']
         return
 
     @property
     def chat_id(self):
-        if self.context:
-            return self.context['message']['chat']['id']
+        if self.data:
+            return self.data['chat']['id']
         return
 
     def send_message(self, chat_id, text, keyboard=None):
@@ -247,11 +255,13 @@ class TelegramBot:
             for schedule in schedules:
                 message += f"{schedule.course.title} \n"
                 message += f"📅 {schedule.date.strftime('%b %d, %Y')} \n"
-                message += "🕒 {} - {}".format(
+                message += "🕒 {} - {} \n".format(
                     schedule.start_time.strftime('%I:%M %P'),
                     schedule.end_time.strftime('%I:%M %P')
                 )
-                message += "\n\n"
+                if schedule.type == Schedule.MAKEUP:
+                    message += "⚠️ *Makeup class* \n"
+                message += "\n"
         return message
 
 
