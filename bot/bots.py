@@ -21,7 +21,7 @@ class TelegramBot:
         self.commands = [
             'start', 'track', 'session',
             'today', 'tomorrow', 'week', 'month',
-            'help', 'credits', 'me'
+            'help', 'credits', 'me', 'about'
         ]
 
     @property
@@ -199,6 +199,12 @@ class TelegramBot:
         Get the list of contributors.
         """
         self.reply(text=messages.credits_message)
+
+    def about(self, **kwargs):
+        """
+        Send a reply with a brief introduction of the bot.
+        """
+        self.reply(text=messages.about)
 
     def response_handler(self, user):
         """

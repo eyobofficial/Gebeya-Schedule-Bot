@@ -9,7 +9,7 @@ class Track(models.Model):
     description = models.TextField(blank=True)
 
     class Meta:
-        ordering = ('title', )
+        ordering = ('id', )
 
     def __str__(self):
         return self.title
@@ -18,7 +18,7 @@ class Track(models.Model):
 class Course(models.Model):
     title = models.CharField(max_length=120)
     code = models.CharField(max_length=30, unique=True)
-    instructor = models.CharField(max_length=120)
+    instructor = models.CharField(max_length=120, blank=True)
     description = models.TextField(blank=True)
 
     class Meta:

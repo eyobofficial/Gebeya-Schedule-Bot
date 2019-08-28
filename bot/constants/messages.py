@@ -33,8 +33,9 @@ help_message = \
 /me - get your account details
 
 *Help*
+/about - get brief description about the bot
 /help - get the list of all commands
-/credits - get the list of contributors.
+/credits - get the list of contributors
 """
 
 session_missing = \
@@ -67,5 +68,13 @@ credits_message = \
 👤 Eyob Tariku
 ✉️ eyobtariku@gmail.com
 📱 +251 911 42 78 05
-
 """
+
+
+about = \
+"""
+👋🏼 Hi! My name is `Gebeya Class Bot`. I will help you to easily get your daily, \
+weekly and monthly Gebeya class schedules. Get started with me by firing the \
+/start command.
+"""
+
