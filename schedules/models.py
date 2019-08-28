@@ -38,6 +38,14 @@ class Schedule(models.Model):
         (EVENING, 'Evening')
     )
 
+    # Class Type
+    REGULAR = 'REGULAR'
+    MAKEUP = 'MAKEUP'
+    TYPE_CHOICES = (
+        (REGULAR, 'Regular'),
+        (MAKEUP, 'Makeup')
+    )
+
     id = models.UUIDField(primary_key=True, editable=False, default=uuid.uuid4)
     course = models.ForeignKey(Course, on_delete=models.CASCADE)
     tracks = models.ManyToManyField(Track)
@@ -45,6 +53,8 @@ class Schedule(models.Model):
     date = models.DateField()
     start_time = models.TimeField()
     end_time = models.TimeField()
+    type = models.TextField(max_length=10, choices=TYPE_CHOICES, default=REGULAR)
+    description = models.TextField(blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
