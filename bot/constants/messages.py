@@ -1,41 +1,45 @@
 welcome_message = \
 """
-Hi {}! You are currently enrolled to the {} track \
-during the {}-time session. Checkout your class schedules using the \
-following commands:
-/today - for your today class schedules
-/tomorrow - for your tomorrow class schedules
-/week - for your one week class schedules
-/month - for your one month class schedules
+👋🏼 Hi {}! You are currently enrolled to the {} track \
+during the {}-time session.
 
-To change your track or session, use the following commands:
-/track - for setting your track
-/session - for setting your session
-/me - to see your current track and session
+*To checkout your class schedules:*
+/today - get class schedules for today
+/tomorrow - get class schedules for tomorrow
+/week - get class schedules for 1 week starting from today
+/month - get class schedules for 1 month starting from today
 
-For more commands:
-/help - for getting the list of all commands
-/credits - for meeting the developers
+*To manage your track or session:*
+/me - get your account details
+/track - set or change your class session
+/session - set or change your class session
+
+*For more commands:*
+/start - get started with me (the bot)
+/about - get brief description about me (the bot)
+/help - get the list of all commands
+/credits - get the list of contributors & developers
 """
 
 
 help_message = \
 """
-*Class Schedules*
-/today - get today class schedules
-/tomorrow - get tomorrow class schedules
-/week - get class schedules for 1 week from today
-/month - get class schedules for 1 week from today
+*To checkout your class schedules:*
+/today - get class schedules for today
+/tomorrow - get class schedules for tomorrow
+/week - get class schedules for 1 week starting from today
+/month - get class schedules for 1 month starting from today
 
-*Account Settings*
-/track - set or change your track
-/session - set or change your class session
+*To manage your track or session:*
 /me - get your account details
+/track - set or change your class session
+/session - set or change your class session
 
-*Help*
-/about - get brief description about the bot
+*For more commands:*
+/start - get started with me (the bot)
+/about - get brief description about me (the bot)
 /help - get the list of all commands
-/credits - get the list of contributors
+/credits - get the list of contributors & developers
 """
 
 session_missing = \
@@ -73,8 +77,8 @@ credits_message = \
 
 about = \
 """
-👋🏼 Hi! My name is `Gebeya Class Bot`. I will help you to easily get your daily, \
-weekly and monthly Gebeya class schedules. Get started with me by firing the \
-/start command.
+👋🏼 My name is `Gebeya Class Bot`. I will help you to easily get your \
+`daily`, `weekly` and `monthly` Gebeya class schedules. Get started with me by \
+firing the /start command.
 """
 

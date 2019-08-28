@@ -17,6 +17,9 @@ class CourseAdmin(admin.ModelAdmin):
 
 @admin.register(Schedule)
 class Schedule(admin.ModelAdmin):
-    list_display = ('course', 'session', 'date', 'start_time', 'end_time')
-    list_filter = ('session', 'date')
+    list_display = (
+        'course','session', 'date',
+        'start_time', 'end_time', 'type'
+    )
+    list_filter = ('session', 'date', 'type')
     filter_horizontal = ('tracks', )
