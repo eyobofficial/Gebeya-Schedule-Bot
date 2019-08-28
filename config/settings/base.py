@@ -48,6 +48,8 @@ INSTALLED_APPS += [
 
 INSTALLED_APPS += [
     'accounts.apps.AccountsConfig',
+    'schedules.apps.SchedulesConfig',
+    'bot.apps.BotConfig'
 ]
 
 MIDDLEWARE = [
@@ -154,3 +156,8 @@ AUTH_USER_MODEL = 'accounts.CustomUser'
 # Cors Headers
 
 CORS_ORIGIN_ALLOW_ALL = True
+
+
+# TELEGRAM
+TELEGRAM_BOT_TOKEN = config('TELEGRAM_BOT_TOKEN')
+TELEGRAM_BOT_URL = f'https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}'
