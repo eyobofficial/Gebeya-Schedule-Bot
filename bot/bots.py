@@ -2,10 +2,10 @@ import telegram
 
 from django.conf import settings
 
-from accounts.models import CustomUser
 from schedules.models import Schedule, Track
 
 from .constants import messages
+from .models import TelegramUser as User
 
 
 class TelegramBot:
@@ -17,7 +17,7 @@ class TelegramBot:
         self.bot = telegram.Bot(settings.TELEGRAM_BOT_TOKEN)
         self.context = kwargs.get('context')
         self.tracks = Track.objects.values_list('title', flat=True)
-        self.sessions = {s[0]: s[1] for s in CustomUser.SESSION_CHOICES}
+        self.sessions = {s[0]: s[1] for s in User.SESSION_CHOICES}
         self.commands = [
             'start', 'track', 'session',
             'today', 'tomorrow', 'week', 'month',

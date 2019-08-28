@@ -14,6 +14,7 @@ To change your track or session, use the following commands:
 /me - to see your current track and session
 
 For more commands:
+/about - get brief description about the bot
 /help - for getting the list of all commands
 /credits - for meeting the developers
 """
