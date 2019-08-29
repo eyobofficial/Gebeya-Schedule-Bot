@@ -1,0 +1,9 @@
+{% extends "admin/change_form.html" %}
+{% block object-tools-items %}
+  <li style="float: none; margin-bottom: 15px">
+    <a href="{% url 'admin:generate-schedules' pk=original.pk %}" class="grp-state-focus">
+        Generate Schedules
+    </a>
+  </li>
+  {{ block.super }}
+{% endblock %}
