@@ -96,6 +96,8 @@ class ScheduleRule(models.Model):
 
     class Meta:
         default_related_name = 'rules'
+        verbose_name = 'Schedule Generating Rule'
+        verbose_name_plural = 'Schedule Generating Rules'
 
     def __str__(self):
         return f'{self.course} <{self.start_date} - {self.end_date}>'
