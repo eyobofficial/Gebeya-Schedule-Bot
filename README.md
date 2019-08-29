@@ -16,7 +16,7 @@ A simple telegram bot that responds back the list of class schedules for [Gebeya
 * `/track` - set or change your track
 * `/session` - set or change your class session
 
-#### Help
+#### More Commands
 * `/start` - get started with the bot
 * `/about` - get brief description about the bot
 * `/help` - get the list of all commands

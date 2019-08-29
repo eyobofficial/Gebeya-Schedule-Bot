@@ -1,6 +1,8 @@
 from django.contrib import admin
 
-from .models import Track, Course, Schedule
+from shared.admin import CustomURLModelAdmin
+from .models import Track, Course, Schedule, ScheduleRule, Pattern
+from .views import ScheduleRuleGenerateView
 
 
 @admin.register(Track)
@@ -13,6 +15,25 @@ class TrackAdmin(admin.ModelAdmin):
 class CourseAdmin(admin.ModelAdmin):
     list_display = ('title', 'code')
     search_fields = ('title', 'code', 'instructor', 'description')
+
+
+class PatternInline(admin.TabularInline):
+    model = Pattern
+
+@admin.register(ScheduleRule)
+class ScheduleRuleAdmin(CustomURLModelAdmin):
+    list_display = ('course', 'session', 'start_date', 'end_date')
+    list_filter = ('session', )
+    filter_horizontal = ('tracks', )
+    inlines = (PatternInline, )
+
+    custom_urls = [
+        {
+            'regex': r'^(?P<pk>.+)/generate-schedules/$',
+            'view': ScheduleRuleGenerateView,
+            'name': 'generate-schedules'
+        }
+    ]
 
 
 @admin.register(Schedule)

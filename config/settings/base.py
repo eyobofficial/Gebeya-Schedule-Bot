@@ -47,6 +47,7 @@ INSTALLED_APPS += [
 # Project apps
 
 INSTALLED_APPS += [
+    'shared.apps.SharedConfig',
     'accounts.apps.AccountsConfig',
     'schedules.apps.SchedulesConfig',
     'bot.apps.BotConfig'
