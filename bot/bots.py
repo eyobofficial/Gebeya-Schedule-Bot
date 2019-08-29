@@ -254,7 +254,7 @@ class TelegramBot:
             message = f"*{context.upper()} SCHEDULES* \n\n"
             for schedule in schedules:
                 message += f"{schedule.course.title} \n"
-                message += f"📅 {schedule.date.strftime('%b %d, %Y')} \n"
+                message += f"📅 {schedule.date.strftime('%a %b %d, %Y')} \n"
                 message += "🕒 {} - {} \n".format(
                     schedule.start_time.strftime('%I:%M %P'),
                     schedule.end_time.strftime('%I:%M %P')
