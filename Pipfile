@@ -23,6 +23,7 @@ requests = "*"
 python-telegram-bot = "*"
 pendulum = "*"
 pyyaml = "*"
+gunicorn = "*"
 
 [requires]
 python_version = "3.6"
