@@ -18,4 +18,8 @@
   fields:
     title: DevOps
     code: DO
-
+- model: schedules.track
+  pk: 5
+  fields:
+    title: UX/UI
+    code: UX
