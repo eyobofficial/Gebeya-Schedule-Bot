@@ -21,5 +21,5 @@
 - model: schedules.track
   pk: 5
   fields:
-    title: UX/UI
-    code: UX
+    title: UI/UX
+    code: UI
