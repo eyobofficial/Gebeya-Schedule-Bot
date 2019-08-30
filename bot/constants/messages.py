@@ -11,7 +11,7 @@ during the {}-time session.
 
 *To manage your track or session:*
 /me - get your account details
-/track - set or change your class session
+/track - set or change your track
 /session - set or change your class session
 
 *For more commands:*
@@ -32,7 +32,7 @@ help_message = \
 
 *To manage your track or session:*
 /me - get your account details
-/track - set or change your class session
+/track - set or change your track
 /session - set or change your class session
 
 *For more commands:*
