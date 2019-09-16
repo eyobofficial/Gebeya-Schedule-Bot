@@ -91,9 +91,11 @@ class TelegramBot:
         """
         Dispatch user messages (commands and texts) to the right method.
         """
-        message = f'Hi {user.first_name} 👋🏼\n Due to lack of access to the ' \
+        message = f'Hi {user.first_name} 👋🏼\nDue to lack of access to the ' \
                    'schedules of all tracks, I am no longer able to tell you ' \
-                   'your class programs. Sorry 😔'
+                   'your class programs. If you can think of any solution for ' \
+                   'the problem, contact me @eyobofficial. Sorry for the ' \
+                   'inconvenience 😔'
         self.reply(message)
         # if self.message.startswith('/'):
         #     command = self.message.lstrip('/')
