@@ -91,15 +91,19 @@ class TelegramBot:
         """
         Dispatch user messages (commands and texts) to the right method.
         """
-        if self.message.startswith('/'):
-            command = self.message.lstrip('/')
-            if command not in self.commands:
-               self.reply("I don't know this command. Use /help to checkout my commands.")
-            else:
-                method = getattr(self, command)
-                method(user=user)
-        else:
-            self.response_handler(user)
+        message = f'Hi {user.first_name}, due to lack of access to the ' \
+                   'schedules of all tracks, I am no longer able to tell you ' \
+                   'your schedules. Sorry :('
+        self.reply(message)
+        # if self.message.startswith('/'):
+        #     command = self.message.lstrip('/')
+        #     if command not in self.commands:
+        #        self.reply("I don't know this command. Use /help to checkout my commands.")
+        #     else:
+        #         method = getattr(self, command)
+        #         method(user=user)
+        # else:
+        #     self.response_handler(user)
 
     def start(self, **kwargs):
         user = kwargs.get('user')
